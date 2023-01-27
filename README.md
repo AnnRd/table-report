@@ -1,4 +1,4 @@
-# table-editor
+# table-report
 
   Запуск и настройка проекта:
   1) Установить зависимости: npm install
