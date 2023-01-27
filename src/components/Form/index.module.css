@@ -1,0 +1,44 @@
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    padding: 5px;
+}
+
+input:nth-child(2) {
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.buttonWrapper {
+    margin-top: 10px;
+}
+
+button {
+    width: 100px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid gray;
+}
+
+th {
+    min-width: 200px;
+    border: 1px solid gray;
+    text-align: left;
+    padding: 5px;
+    background-color: bisque;
+}
+
+th:first-child {
+    min-width: 30px;
+}
