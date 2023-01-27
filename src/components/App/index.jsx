@@ -30,9 +30,9 @@ export function App() {
         )
       }
       <div className={s.content}>
-        <Table />
+        <Table users={user} setModalData={setModalData} setIsOpenModal={setIsOpenModal} setEditableUserData={setEditableUserData} setInputValue={setInputValue} setUser={setUser}/>
         <div className={s.formWrapper}>
-          <Form />
+          <Form editableUserData={editableUserData} users={user} inputValue={inputValue} setEditableUserData={setEditableUserData} setInputValue={setInputValue} setUser={setUser}/>
         </div>
       </div>
     </div>

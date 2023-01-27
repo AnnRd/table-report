@@ -1,0 +1,45 @@
+.button {
+    width: 90px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add {
+    background-color: bisque;
+}
+
+.add:hover {
+    background-color: rgb(249, 184, 104);
+}
+
+.add:active {
+    background-color: rgb(252, 159, 46);
+}
+
+.edit {
+    background-color: #5dd35d;
+}
+
+.edit:hover {
+    background-color: #43a343;
+}
+
+.edit:active {
+    background-color: #018101;
+}
+
+.delete {
+    background-color: #f44c4c;
+}
+
+.delete:hover {
+    background-color: #fa0e0e;
+}
+
+.delete:active {
+    background-color: #cd0000;
+}
