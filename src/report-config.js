@@ -11,19 +11,6 @@ export const data = [{
     id: 4, name: 'Usr4', value: 'Кирпич'
   },
   {
-    id: 5, name: 'Usrexport const data = [{
-    id: 1, name: 'Usr1', value: 'Usr1'
-  },
-  {
-    id: 2, name: 'Usr2', value: 'Usr2'
-  },
-  {
-    id: 3, name: 'Usr3', value: 'Кресло'
-  },
-  {
-    id: 4, name: 'Usr4', value: 'Кирпич'
-  },
-  {
     id: 5, name: 'Usr5', value: 'Уши'
   },
   {

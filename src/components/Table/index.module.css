@@ -1,0 +1,33 @@
+th, td {
+    text-align: center;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.separator {
+    height: 50px;
+    border: 1px solid gray;
+    cursor: grab;
+}
+
+.paginationButton {
+    width: 40px;
+    height: 40px;
+    margin: 20px 20px 10px 0;
+    border: 1px solid gray;
+    transition: all 0.4s;
+    border-radius: 5px;
+}
+
+.paginationButton a {
+    text-decoration: none;
+    font-size: 20px;
+    color: gray;
+}
+
+.paginationButton:hover {
+    background-color: bisque;
+}
