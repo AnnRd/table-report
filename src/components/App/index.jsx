@@ -9,11 +9,9 @@ export function App() {
   const [user, setUser] = useState(data);
   const [isModalOpen, setIsOpenModal] = useState(false);
   const [modalData, setModalData] = useState();
+  const [inputValue, setInputValue] = useState('');
+  const [tables, setTables] = useState(['№', 'Имя', 'Значение']);
 
-  const [inputValue, setInputValue] = useState({
-    name: '',
-    value: '',
-  });
 
   const [editableUserData, setEditableUserData] = useState({
     isEdit: false,
@@ -30,9 +28,9 @@ export function App() {
         )
       }
       <div className={s.content}>
-        <Table users={user} setModalData={setModalData} setIsOpenModal={setIsOpenModal} setEditableUserData={setEditableUserData} setInputValue={setInputValue} setUser={setUser}/>
+        <Table tables={tables} users={user} setTables={setTables} setModalData={setModalData} setIsOpenModal={setIsOpenModal} setEditableUserData={setEditableUserData} setInputValue={setInputValue} setUser={setUser}/>
         <div className={s.formWrapper}>
-          <Form editableUserData={editableUserData} users={user} inputValue={inputValue} setEditableUserData={setEditableUserData} setInputValue={setInputValue} setUser={setUser}/>
+          <Form tables={tables} setTables={setTables} editableUserData={editableUserData} users={user} inputValue={inputValue} setEditableUserData={setEditableUserData} setInputValue={setInputValue} setUser={setUser}/>
         </div>
       </div>
     </div>
