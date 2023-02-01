@@ -22,10 +22,10 @@ export function Table({ tables, users, setTables, setModalData, setIsOpenModal, 
                 el.remove();
             }
 
-            if (el.id != 0) {
+            if (el.id - 1 != 0 && el.id != 0) {
                 el.id = el.id - 1
             }
-            return el.id
+
         });
 
         setTables(tables.filter((_, tableIndex) => tableIndex !== index))
