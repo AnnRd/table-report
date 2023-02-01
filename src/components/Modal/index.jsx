@@ -11,18 +11,22 @@ export function Modal({children, modalData, onClose}) {
 
     return ReactDOM.createPortal(
         <div className={s.modalWrapper}>
-            <div className={s.buttonWrapper}>
-                <button className={s.closeButton} onClick={closeModal}>
-                    <span>Закрыть</span>
-                </button>
-            </div>
-            <div>
-                {children}
-                <div>
-                    {modalData.name}
+            <div className={s.modalContent}>
+                <div className={s.buttonWrapper}>
+                    <button className={s.closeButton} onClick={closeModal}>
+                        <span>Закрыть</span>
+                    </button>
                 </div>
                 <div>
-                    {modalData.value}
+                    {children}
+                    <div className={s.modalElements}>
+                        <div>
+                            {modalData.name}
+                        </div>
+                        <div>
+                            {modalData.value}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>, document.getElementById('portal')

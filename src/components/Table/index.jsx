@@ -61,7 +61,7 @@ export function Table({ tables, users, setTables, setModalData, setIsOpenModal, 
                         key={ind}
                     >
                         {Object.values(user).map((el, i) => {
-                            return <td id={i} onClick={() => toggleModal(user)} className={s.separator}>{el}</td>
+                            return <td key={i} id={i} onClick={() => toggleModal(user)} className={s.separator}>{el}</td>
                         })}
                     </tr>
                 ))}
