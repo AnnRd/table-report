@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import { Button } from '../Button';
 import s from './index.module.css';
 
 export function Table({ tables, users, setTables, setModalData, setIsOpenModal, setUser, setInputValue, setEditableUserData }) {
-    const [currentCard, setCurrentCard] = useState();
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 20;
 
@@ -17,6 +15,19 @@ export function Table({ tables, users, setTables, setModalData, setIsOpenModal, 
     }
 
     const deleteHandler = (index) => {
+        const tdList = document.querySelectorAll(`td`);
+
+        tdList.forEach((el) => {
+            if (el.id == index) {
+                el.remove();
+            }
+
+            if (el.id != 0) {
+                el.id = el.id - 1
+            }
+            return el.id
+        });
+
         setTables(tables.filter((_, tableIndex) => tableIndex !== index))
     }
 
@@ -41,17 +52,17 @@ export function Table({ tables, users, setTables, setModalData, setIsOpenModal, 
         <div className={s.tableWrapper}>
           <table>
             {tables.map((table, index) => (
-                <th onDoubleClick={() => deleteHandler(index)} onClick={() => editHandler(table, index)} key={index}>{table}</th>
+                <th id={index} onDoubleClick={() => deleteHandler(index)} onClick={() => editHandler(table, index)} key={index}>{table}</th>
             ))}
             <tbody>
-                {currentItems.map((user, index) => (
+                {currentItems.map((user, ind) => (
                     <tr 
                         className={s.separator}
-                        key={index}
+                        key={ind}
                     >
-                        <td onClick={() => toggleModal(user)} className={s.separator}>{user.id}</td>
-                        <td onClick={() => toggleModal(user)} className={s.separator}>{user.name}</td>
-                        <td onClick={() => toggleModal(user)} className={s.separator}>{user.value}</td>
+                        {Object.values(user).map((el, i) => {
+                            return <td id={i} onClick={() => toggleModal(user)} className={s.separator}>{el}</td>
+                        })}
                     </tr>
                 ))}
             </tbody>
